@@ -60,6 +60,6 @@ predictions = clf.predict(exemples)
 
 classes = ['Très bonne', 'Bonne', 'Modérée', 'Mauvaise', 'Très mauvaise']
 for i, (attendue, pred) in enumerate(zip(predictions_attendues, predictions)):
-    if attendue == pred:  # Afficher seulement les prédictions correctes
+    if attendue == pred:
         print(f"Exemple {i + 1} - Prédiction attendue : {classes[attendue]} - Prédiction de l'algo : {classes[pred]} "
               f"(valeurs no2={exemples.iloc[i, 0]}, o3={exemples.iloc[i, 1]}, pm10={exemples.iloc[i, 2]})")
